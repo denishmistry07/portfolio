@@ -724,3 +724,6 @@ let tltransition = new TimelineMax({
     },
     '-=1.2'
   )
+
+// Add Gitignore
+// ➜  portfolio git:(dev) ✗ touch .gitignore
