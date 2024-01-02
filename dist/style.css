@@ -618,9 +618,6 @@ header.fixed-header.header-anim {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .inset-0 {
   inset: 0px;
 }
@@ -1665,7 +1662,7 @@ header.fixed-header.header-anim {
 .\[\&\.open\]\:justify-center.open {
   justify-content: center;
 }
-.\[\&\.open\]\:bg-white.open {
+.\[\&\.open\]\:bg-black.open {
   --tw-bg-opacity: 1;
-  background-color: rgb(213 205 196 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
