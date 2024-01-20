@@ -618,6 +618,9 @@ header.fixed-header.header-anim {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .inset-0 {
   inset: 0px;
 }
@@ -749,6 +752,9 @@ header.fixed-header.header-anim {
 .h-2\.5 {
   height: 0.625rem;
 }
+.h-\[75vh\] {
+  height: 75vh;
+}
 .h-\[90vh\] {
   height: 90vh;
 }
@@ -760,6 +766,9 @@ header.fixed-header.header-anim {
 }
 .h-screen {
   height: 100vh;
+}
+.max-h-\[600px\] {
+  max-height: 600px;
 }
 .min-h-\[50vh\] {
   min-height: 50vh;
@@ -793,6 +802,9 @@ header.fixed-header.header-anim {
 }
 .max-w-5xl {
   max-width: 64rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
 }
 .max-w-\[100px\] {
   max-width: 100px;
@@ -882,6 +894,9 @@ header.fixed-header.header-anim {
 }
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.rounded-\[30px\] {
+  border-radius: 30px;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -1024,10 +1039,6 @@ header.fixed-header.header-anim {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1048,12 +1059,11 @@ header.fixed-header.header-anim {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
 .font-bold {
   font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 .font-light {
   font-weight: 300;
@@ -1066,9 +1076,6 @@ header.fixed-header.header-anim {
 }
 .font-thin {
   font-weight: 100;
-}
-.font-extrabold {
-  font-weight: 800;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1303,6 +1310,18 @@ header.fixed-header.header-anim {
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+.project-wrapper{
+  position: sticky;
+  top: calc(20vh);
+  margin-bottom: 15rem;
+}
+.project-wrapper a{
+  perspective-origin: 50% -10vh;
+  perspective: 1000px;
+}
+.project-wrapper a>div{
+  transform-origin: 50% -20vh ;
+}
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1349,6 +1368,12 @@ header.fixed-header.header-anim {
   content: var(--tw-content);
   --tw-gradient-from: rgb(17 24 39 / 0.8) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.hover\:before\:from-gray-950\/\[0\.8\]:hover::before {
+  content: var(--tw-content);
+  --tw-gradient-from: rgb(3 7 18 / 0.8) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(3 7 18 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .group\/expirence:hover .group-hover\/expirence\:mt-4 {
@@ -1568,9 +1593,19 @@ header.fixed-header.header-anim {
     padding-right: 2rem;
   }
 
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
   .lg\:py-36 {
@@ -1586,11 +1621,6 @@ header.fixed-header.header-anim {
   .lg\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .lg\:pb-0 {
@@ -1611,10 +1641,6 @@ header.fixed-header.header-anim {
 
   .lg\:pr-32 {
     padding-right: 8rem;
-  }
-
-  .lg\:pt-40 {
-    padding-top: 10rem;
   }
 
   .lg\:text-2xl {
@@ -1642,14 +1668,14 @@ header.fixed-header.header-anim {
     line-height: 1;
   }
 
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:leading-lh16 {

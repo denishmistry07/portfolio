@@ -216,4 +216,17 @@
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+
+.project-wrapper{
+  position: sticky;
+  top: calc(20vh);
+  margin-bottom: 15rem;
+}
+.project-wrapper a{
+  perspective-origin: 50% -10vh;
+  perspective: 1000px;
+}
+.project-wrapper a>div{
+  transform-origin: 50% -20vh ;
+}
 }
