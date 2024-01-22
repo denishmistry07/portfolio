@@ -500,7 +500,7 @@ video {
     padding-left: 15px;
   }
 }
-body {
+body,a {
   cursor: none;
 }
 .btn {
@@ -594,6 +594,11 @@ header.fixed-header.header-anim {
   pointer-events: none;
   position: fixed;
   z-index: 999999999;
+  mix-blend-mode: difference;
+}
+.cursor  .circle {
+  pointer-events: none;
+  display: block;
   height: 20px;
   width: 20px;
   --tw-translate-x: -50%;
@@ -602,15 +607,74 @@ header.fixed-header.header-anim {
   border-radius: 50%;
   --tw-bg-opacity: 1;
   background-color: rgb(213 205 196 / var(--tw-bg-opacity));
-  mix-blend-mode: difference;
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 100ms;
   transition-timing-function: linear;
 }
-.cursor.large {
+.cursor>span {
+  display: none;
+}
+.cursor.large .circle {
   height: 100px;
   width: 100px;
+}
+.cursor.project {
+  mix-blend-mode: normal;
+}
+.cursor.project span {
+  display: block;
+}
+.cursor.project .circle {
+  height: 100px;
+  width: 100px;
+}
+.cursor.project .project-text {
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9;
+  display: flex;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  padding: 0.625rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 18px;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+/* .popupebox {
+      @apply opacity-0 overflow-hidden w-[380px] h-auto max-h-[350px] absolute z-[-1] hidden rounded-xl left-0 top-0;
+      background: rgb(240 240 240 / 27%);
+    }
+    .project-img {
+      @apply max-h-[200px] overflow-hidden;
+    }
+    .popupebox .header {
+      @apply w-[calc(100%)] bg-[rgb(0_0_0_/_71%)] box-border bg-blend-color-burn px-[15px] py-0.5 rounded-[12px_12px_0_0];
+    }
+    .popupebox .dot {
+      @apply h-1.5 w-1.5 inline-block mr-0.5 mb-0.5 rounded-[50%];
+      background: #ed594a;
+    }
+    .popupebox .dot:nth-child(2) {
+      background: #fdd800;
+    }
+    .popupebox .dot:nth-child(3) {
+      background: #5ac05a;
+    } */
+.static {
+  position: static;
+}
+.fixed {
+  position: fixed;
 }
 .absolute {
   position: absolute;
@@ -640,14 +704,23 @@ header.fixed-header.header-anim {
 .right-0 {
   right: 0px;
 }
+.right-\[15px\] {
+  right: 15px;
+}
 .top-0 {
   top: 0px;
+}
+.top-\[15px\] {
+  top: 15px;
 }
 .z-10 {
   z-index: 10;
 }
 .z-20 {
   z-index: 20;
+}
+.z-50 {
+  z-index: 50;
 }
 .z-\[0\] {
   z-index: 0;
@@ -680,11 +753,17 @@ header.fixed-header.header-anim {
 .mb-3 {
   margin-bottom: 0.75rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 .mb-8 {
   margin-bottom: 2rem;
+}
+.ml-1 {
+  margin-left: 0.25rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -697,6 +776,9 @@ header.fixed-header.header-anim {
 }
 .mr-2 {
   margin-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 0.75rem;
 }
 .mr-5 {
   margin-right: 1.25rem;
@@ -752,6 +834,9 @@ header.fixed-header.header-anim {
 .h-2\.5 {
   height: 0.625rem;
 }
+.h-\[400px\] {
+  height: 400px;
+}
 .h-\[75vh\] {
   height: 75vh;
 }
@@ -766,9 +851,6 @@ header.fixed-header.header-anim {
 }
 .h-screen {
   height: 100vh;
-}
-.max-h-\[600px\] {
-  max-height: 600px;
 }
 .min-h-\[50vh\] {
   min-height: 50vh;
@@ -847,6 +929,9 @@ header.fixed-header.header-anim {
 .resize {
   resize: both;
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -883,6 +968,9 @@ header.fixed-header.header-anim {
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -894,6 +982,9 @@ header.fixed-header.header-anim {
 }
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.rounded-\[20px\] {
+  border-radius: 20px;
 }
 .rounded-\[30px\] {
   border-radius: 30px;
@@ -967,6 +1058,10 @@ header.fixed-header.header-anim {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
 .p-0 {
   padding: 0px;
 }
@@ -1015,6 +1110,9 @@ header.fixed-header.header-anim {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;
@@ -1090,6 +1188,10 @@ header.fixed-header.header-anim {
   --tw-text-opacity: 1 !important;
   color: rgb(30 41 59 / var(--tw-text-opacity)) !important;
 }
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1127,6 +1229,12 @@ header.fixed-header.header-anim {
 .opacity-50 {
   opacity: 0.5;
 }
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
 .opacity-\[0\.1\] {
   opacity: 0.1;
 }
@@ -1158,6 +1266,9 @@ header.fixed-header.header-anim {
 }
 .duration-700 {
   transition-duration: 700ms;
+}
+.ease-linear {
+  transition-timing-function: linear;
 }
 .mobile-height{
   height: calc(var(--vh, 1vh) * 100);
@@ -1352,6 +1463,11 @@ header.fixed-header.header-anim {
   --tw-gradient-from: rgb(17 24 39 / .7) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.hover\:scale-\[1\.02\]:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
@@ -1687,6 +1803,25 @@ header.fixed-header.header-anim {
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+.\[\&\.active\]\:absolute.active {
+  position: absolute;
+}
+.\[\&\.active\]\:inset-0.active {
+  inset: 0px;
+}
+.\[\&\.active\]\:h-screen.active {
+  height: 100vh;
+}
+.\[\&\.active\]\:w-full.active {
+  width: 100%;
+}
+.\[\&\.active\]\:py-20.active {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.\[\&\.active\]\:opacity-100.active {
+  opacity: 1;
 }
 .\[\&\.open\]\:fixed.open {
   position: fixed;

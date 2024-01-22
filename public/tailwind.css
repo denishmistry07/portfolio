@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @layer components  {
-    body{
+    body,a{
       @apply cursor-none;
     }
     .btn{
@@ -35,12 +35,54 @@
       .cms h4{
         @apply lg:text-2xl text-xl mb-3 font-medium;
       }
-      .cursor {
-        @apply  z-[999999999] fixed w-[20px] h-[20px] rounded-[50%] bg-white transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-linear  pointer-events-none mix-blend-difference;
+      .cursor  {
+        @apply  z-[999999999] fixed pointer-events-none mix-blend-difference;
       }
-      .cursor.large{
+      .cursor  .circle {
+        @apply block w-[20px] h-[20px] rounded-[50%] bg-white transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-linear  pointer-events-none;
+      }
+
+      .cursor>span{
+        @apply hidden;
+      }
+      .cursor.large .circle{
          @apply w-[100px] h-[100px];
       }
+      .cursor.project{
+        @apply mix-blend-normal;
+      }
+      .cursor.project span{
+        @apply block;
+      }
+      .cursor.project .circle{
+        @apply w-[100px] h-[100px];
+      }
+      .cursor.project .project-text {
+        @apply absolute left-[-50px] text-black top-[-50px] z-[9] flex h-[100px] w-[100px] items-center justify-center text-center leading-[18px] text-sm p-2.5 rounded-[60px] right-0 bottom-0;
+      }
+
+
+
+    /* .popupebox {
+      @apply opacity-0 overflow-hidden w-[380px] h-auto max-h-[350px] absolute z-[-1] hidden rounded-xl left-0 top-0;
+      background: rgb(240 240 240 / 27%);
+    }
+    .project-img {
+      @apply max-h-[200px] overflow-hidden;
+    }
+    .popupebox .header {
+      @apply w-[calc(100%)] bg-[rgb(0_0_0_/_71%)] box-border bg-blend-color-burn px-[15px] py-0.5 rounded-[12px_12px_0_0];
+    }
+    .popupebox .dot {
+      @apply h-1.5 w-1.5 inline-block mr-0.5 mb-0.5 rounded-[50%];
+      background: #ed594a;
+    }
+    .popupebox .dot:nth-child(2) {
+      background: #fdd800;
+    }
+    .popupebox .dot:nth-child(3) {
+      background: #5ac05a;
+    } */
 }
 @layer utilities {
 .mobile-height{
@@ -229,4 +271,5 @@
 .project-wrapper a>div{
   transform-origin: 50% -20vh ;
 }
+
 }
