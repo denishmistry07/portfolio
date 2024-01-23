@@ -744,6 +744,9 @@ header.fixed-header.header-anim {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1120,6 +1123,12 @@ header.fixed-header.header-anim {
 .pt-20 {
   padding-top: 5rem;
 }
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.pb-0 {
+  padding-bottom: 0px;
+}
 .text-left {
   text-align: left;
 }
@@ -1136,6 +1145,10 @@ header.fixed-header.header-anim {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-base {
   font-size: 1rem;
@@ -1178,6 +1191,9 @@ header.fixed-header.header-anim {
 .uppercase {
   text-transform: uppercase;
 }
+.italic {
+  font-style: italic;
+}
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -1217,6 +1233,17 @@ header.fixed-header.header-anim {
 .text-white\/\[\.8\] {
   color: rgb(213 205 196 / .8);
 }
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+.text-slate-700 {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+.text-white\/10 {
+  color: rgb(213 205 196 / 0.1);
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -1237,6 +1264,9 @@ header.fixed-header.header-anim {
 }
 .opacity-\[0\.1\] {
   opacity: 0.1;
+}
+.opacity-5 {
+  opacity: 0.05;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1646,6 +1676,14 @@ header.fixed-header.header-anim {
     margin-top: 1.25rem;
   }
 
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
   .lg\:inline-block {
     display: inline-block;
   }
@@ -1759,6 +1797,18 @@ header.fixed-header.header-anim {
     padding-right: 8rem;
   }
 
+  .lg\:pt-28 {
+    padding-top: 7rem;
+  }
+
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1792,6 +1842,16 @@ header.fixed-header.header-anim {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:leading-lh16 {
