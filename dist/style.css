@@ -852,14 +852,11 @@ header.fixed-header.header-anim {
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
-.min-h-screen {
-  min-height: 100vh;
-}
-.min-h-\[450px\] {
-  min-height: 450px;
-}
 .min-h-\[550px\] {
   min-height: 550px;
+}
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-10 {
   width: 2.5rem;
@@ -1120,9 +1117,6 @@ header.fixed-header.header-anim {
 .pb-3 {
   padding-bottom: 0.75rem;
 }
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
 .pt-20 {
   padding-top: 5rem;
 }
@@ -1243,6 +1237,9 @@ header.fixed-header.header-anim {
 }
 .opacity-\[0\.1\] {
   opacity: 0.1;
+}
+.opacity-80 {
+  opacity: 0.8;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1744,10 +1741,6 @@ header.fixed-header.header-anim {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
   }
 
   .lg\:pb-20 {
