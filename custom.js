@@ -1,21 +1,10 @@
 window.addEventListener("load", function () {
-
-
   tltransition.play(0);
-
-  var loading = true;
-
-
   init();
   initModalScroll();
   var mobile = window.innerWidth < 768;
   // console.log(mobile);
   gsap.registerPlugin(ScrollTrigger);
-
-
-
-
-
 
   // ================
   // Custom Cursor
@@ -745,6 +734,17 @@ function SmoothScroll(target, speed, smooth) {
       }
     });
   });
+
+  if(window.location.hash){
+
+        setTimeout(() => {
+        var onloadatarget = document.getElementById(window.location.hash.substring(1));
+
+        pos = onloadatarget.offsetTop;
+        // console.log("enter",onloadatarget.offsetTop)
+        update();
+        }, 400);
+    }
 
 }
 
