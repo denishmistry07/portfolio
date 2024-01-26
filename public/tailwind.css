@@ -138,12 +138,12 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
   } */
-
-  * {
-    scrollbar-color: rgba(35, 38, 47, 0.3) transparent;
-    scrollbar-width: thin;
-}
-
+  @supports (-moz-appearance:none) {
+    * {
+        scrollbar-color: #797979 #3e3e3e;
+        scrollbar-width: thin;
+    }
+  }
 ::-webkit-scrollbar-track {
     box-shadow: none;
     -webkit-box-shadow: none;

@@ -682,9 +682,6 @@ header.fixed-header.header-anim {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .inset-0 {
   inset: 0px;
 }
@@ -855,11 +852,11 @@ header.fixed-header.header-anim {
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
-.min-h-screen {
-  min-height: 100vh;
-}
 .min-h-\[550px\] {
   min-height: 550px;
+}
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-10 {
   width: 2.5rem;
@@ -1114,9 +1111,6 @@ header.fixed-header.header-anim {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-0 {
-  padding-bottom: 0px;
-}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1235,17 +1229,14 @@ header.fixed-header.header-anim {
 .opacity-50 {
   opacity: 0.5;
 }
-.opacity-60 {
-  opacity: 0.6;
-}
 .opacity-70 {
   opacity: 0.7;
 }
-.opacity-\[0\.1\] {
-  opacity: 0.1;
-}
 .opacity-80 {
   opacity: 0.8;
+}
+.opacity-\[0\.1\] {
+  opacity: 0.1;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1260,13 +1251,6 @@ header.fixed-header.header-anim {
 .blur-\[3px\] {
   --tw-blur: blur(3px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 .transition-all {
   transition-property: all;
@@ -1325,10 +1309,12 @@ header.fixed-header.header-anim {
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
   } */
-* {
-    scrollbar-color: rgba(35, 38, 47, 0.3) transparent;
-    scrollbar-width: thin;
-}
+@supports (-moz-appearance:none) {
+    * {
+        scrollbar-color: #797979 #3e3e3e;
+        scrollbar-width: thin;
+    }
+  }
 ::-webkit-scrollbar-track {
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -1754,10 +1740,6 @@ header.fixed-header.header-anim {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
   }
 
   .lg\:pb-20 {
